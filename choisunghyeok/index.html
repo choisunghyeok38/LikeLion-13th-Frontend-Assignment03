@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="./index.js"></script>
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+       <h1>회원가입</h1> 
+    </header>
+    <main>
+        <form class="form" onsubmit="return test()">
+            <div class="input-group">
+                <input type="text" name="username" placeholder="이름" required>
+                <div class="error-message" id="username-error"></div>
+            </div>
+            <div class="input-group"><br>
+                <input type="text" name="email" placeholder="이메일" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="password-container">
+                <input type="password" id="password1" name="password1" placeholder="비밀번호" required>
+                <button type="button" id="togglePassword1" style="color: blue;">보기</button>
+                <div id="password1-error" class="error-message"></div>
+            </div>
+            <div class="password-container">
+                <input type="password" id="password2" name="password2" placeholder="비밀번호 확인" required>
+                <button type="button" id="togglePassword2" style="color: blue;">보기</button>
+                <div id="password2-error" class="error-message"></div>
+            </div>
+            <div class="button">
+                <input type="submit" class="submit" value="회원가입">
+                <input type="reset" class="reset" value="초기화">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+
+
+
