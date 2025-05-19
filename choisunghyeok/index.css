@@ -4,9 +4,9 @@
 
 .form {
     width: 100%;
-    max-width: 400px;
+    /* max-width: 90%; */
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -21,15 +21,15 @@
 
 .error-message {
     color: red;
-    font-size: 10px;
+    font-size: 5px;
 }
 
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    height: 40px;
+    
     padding: 8px;
-    font-size: 16px;
+    font-size: 10px;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
@@ -39,16 +39,19 @@ input[type="password"] {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    
 }
 
 .password-container input[type="password"] {
     flex: 1;
+    width: 70%;
+    
 }
 
 .password-container button {
-    height: 40px;
+    height: 10%;
     padding: 0 12px;
-    font-size: 14px;
+    font-size: 10px;
     white-space: nowrap;
     cursor: pointer;
 }
@@ -59,7 +62,7 @@ input[type="password"] {
     justify-content: space-between;
     gap: 10px;
     margin-top: 20px;
-    width: 100%;
+    /* width: 80%; */
     box-sizing: border-box;
 }
 
@@ -68,7 +71,7 @@ input[type="password"] {
     flex: 1;
     padding: 12px;
     color: white;
-    font-size: 16px;
+    font-size: 10px;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -84,26 +87,17 @@ input[type="password"] {
 }
 
 
-@media (max-width: 600px) {
-    .form {
-        max-width: 90%;
-        padding: 10px;
-    }
-    .button {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .submit,
-    .reset {
-        width: 100%;
-        margin-top: 0;
-    }
-}
 
-@media (max-width: 320px) {
+
+@media all and (max-width: 767px) {
     .button .submit,
     .button .reset {
         margin-bottom: 10px;
     }
+    .form {
+        max-width: 90%;
+        padding: 10px;
+        width: 60%;
+    }
 } 
- 
+
