@@ -87,23 +87,6 @@ input[type="password"] {
 }
 
 
-/* @media all and (max-width: 600px) {
-    .form {
-        max-width: 90%;
-        padding: 10px;
-        width: 60%;
-    }
-    .button {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .submit,
-    .reset {
-        width: 80%;
-        margin-top: 0;
-    }
-} */
-
 @media all and (max-width: 767px) {
     .button .submit,
     .button .reset {
@@ -116,7 +99,7 @@ input[type="password"] {
     }
 } 
 
-@media all and (max-width: 1280px) {
+/* @media all and (max-width: 1280px) {
     .form {
         max-width: 90%;
         padding: 10px;
@@ -131,8 +114,9 @@ input[type="password"] {
         width: 90%;
         margin-top: 0;
     }
-}
+} */
 
 .all {
-    width: 100%;
+    width: 500px;
+    margin: 0 auto; 
 }
