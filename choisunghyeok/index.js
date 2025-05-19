@@ -26,15 +26,23 @@ function test() {
     usernameInput.classList.add('input-success');
   }
 
-  if (email === "") {
-    document.getElementById('email-error').textContent = "이메일을 입력해주세요.";
-    emailInput.classList.add('input-error');
-    emailInput.classList.remove('input-success');
-    isValid = false;
-  }  else {
-    emailInput.classList.remove('input-error');
-    emailInput.classList.add('input-success');
-  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (email === "") {
+  document.getElementById('email-error').textContent = "이메일을 입력해주세요.";
+  emailInput.classList.add('input-error');
+  emailInput.classList.remove('input-success');
+  isValid = false;
+} else if (!emailRegex.test(email)) {
+  document.getElementById('email-error').textContent = "올바른 이메일 형식이 아닙니다.";
+  emailInput.classList.add('input-error');
+  emailInput.classList.remove('input-success');
+  isValid = false;
+} else {
+  emailInput.classList.remove('input-error');
+  emailInput.classList.add('input-success');
+}
+
 
   if (p1.length < 6) {
     document.getElementById('password1-error').textContent = "비밀번호는 최소 6자입니다.";
